@@ -23,10 +23,7 @@ console.log('-----第一階段：新增課程購買記錄（優惠定價）-----
  * 成功新增後，印出「新增購買記錄成功！會員 [會員名稱] 購買 [數量] 堂課，總金額為 [金額] 元。」
  */
 let purchaseRecords = [];
-const checkNameInput = (memberName) => {
-    let memberCheck = members.filter(member => member === memberName);
-    return (memberCheck.length > 0) ? true : false
-}
+const checkNameInput = (memberName) => members.includes(memberName);
 
 const checkQtyInput = (courseQty) => (Number.isInteger(courseQty) && courseQty > 0) ? true : false;
 
